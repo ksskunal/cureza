@@ -21,7 +21,7 @@ export const priceFromJSON = (priceJSON: string, quantity: number = 1, raw?: boo
 
       price = (priceValue / 100).toLocaleString('en-US', {
         style: 'currency',
-        currency: 'USD', // TODO: use `parsed.currency`
+        currency: 'INR', // TODO: use `parsed.currency`
       })
 
       if (priceType === 'recurring') {
@@ -71,10 +71,10 @@ export const Price: React.FC<{
           )}
         </div>
       )}
-      {button && button === 'addToCart' && (
+      {/* {button && button === 'addToCart' && (
         <AddToCartButton product={product} appearance="default" />
       )}
-      {button && button === 'removeFromCart' && <RemoveFromCartButton product={product} />}
+      {button && button === 'removeFromCart' && <RemoveFromCartButton product={product} />} */}
     </div>
   )
 }
